@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "dashbord",
     "accounts",
-
+    'captcha',
     # "crispy_forms",
 ]
 
@@ -141,5 +141,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "manishaharijan94@gmail.com"
 EMAIL_HOST_PASSWORD = "okrf vems qiom cpsm"
-
 

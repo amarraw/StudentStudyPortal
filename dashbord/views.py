@@ -5,17 +5,10 @@ from django.contrib import messages
 from django.views.generic import DetailView
 from youtubesearchpython import VideosSearch
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout , login  , authenticate
-from django.core.mail import send_mail
-from django.contrib.auth.models import User
-
-from django.contrib.auth.forms import AuthenticationForm
-from django.template.loader import render_to_string
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .unitConversion import convert_units
 import requests
 import wikipedia
-import random
 # Create your views here.
 
 
@@ -328,4 +321,7 @@ def user_profile(request):
         'todo_done':todo_done
     }
     return render(request, 'dashboard/profile.html', context)
+
+
+
 

@@ -20,5 +20,5 @@ urlpatterns = [
     path("dictinory/", views.dictinory , name="dictinory"),
     path("wiki/", views.wiki , name="wiki"),
     path('convert/', views.unit_conversion_view, name='unit_conversion'),
-    path("profile/",views.user_profile, name="profile")
+    path("profile/",views.user_profile, name="profile"),
 ]
