@@ -18,12 +18,16 @@ def register(request):
         if form.is_valid():
             email = form.cleaned_data['email']
             password = form.cleaned_data['password1'] 
+            first_name = form.cleaned_data['first_name']  
+            last_name = form.cleaned_data['last_name'] 
 
 
             otp = generate_otp()
             request.session['otp'] = otp
             request.session['email'] = email
             request.session['password1'] = password
+            request.session['first_name'] = first_name  
+            request.session['last_name'] = last_name   
 
             subject = 'Your OTP for verification'
 
@@ -56,8 +60,12 @@ def verify_otp(request):
         if otp == str(request.session.get('otp')):
             email = request.session.get('email')
             password = request.session.get('password1')
+            first_name = request.session.get('first_name')  
+            last_name = request.session.get('last_name') 
 
             user = User.objects.create_user(username=email, email=email)
+            user.first_name = first_name 
+            user.last_name = last_name
             user.set_password(password) 
             user.save()
             subject = 'Thank you for registering with us'

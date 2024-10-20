@@ -54,13 +54,10 @@
             </li>
             {% if user.is_authenticated %}
             
-            <li class="nav-item">
-              <a class="nav-link" href="#">Total Points: {{ user_points }}</a>
-          </li>
             <li class="nav-item dropdown mr-4">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                {{ user.username|capfirst }}
+                {{ user.first_name|capfirst }} {{user.last_name}}
               </a>
               
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
