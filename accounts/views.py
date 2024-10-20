@@ -107,5 +107,4 @@ def login_view(request):
 @login_required(login_url='login')
 def lougout_view(request):
     logout(request)
-    # return render(request, 'dashboard/logout.html')
     return redirect('login')

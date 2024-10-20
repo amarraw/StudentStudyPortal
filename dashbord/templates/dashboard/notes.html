@@ -1,7 +1,7 @@
 {% extends 'dashboard/base.html' %} 
 {% load static %}
 {% block content %}
-{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% load custom_filters %}
 
 <div class="container">
     <div class="row">
@@ -33,12 +33,12 @@
         </fieldset>
         <div class="form-group"> 
             {{ form.title.label_tag }} <br>
-            {{ form.title }}
+            {{ form.title|add_class:"form-control" }}
             {{ form.title.errors }}
         </div>
         <div class="form-group">
             {{ form.descriptions.label_tag }}  <br>
-            {{ form.descriptions }}
+            {{ form.descriptions|add_class:"form-control" }}
             {{ form.descriptions.errors }}
         </div>
         <div class="form-group">
