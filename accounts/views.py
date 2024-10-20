@@ -60,6 +60,21 @@ def verify_otp(request):
             user = User.objects.create_user(username=email, email=email)
             user.set_password(password) 
             user.save()
+            subject = 'Thank you for registering with us'
+
+            context = {
+                'email': email
+            }
+            message = render_to_string('register_successful.html', context)
+
+            send_mail(
+                subject,
+                message,
+                'manishaharijan94@gmail.com',
+                [email],
+                fail_silently=False,
+                html_message=message, 
+            )
             messages.success(request, 'Account created successfully')
             return redirect('login')
         else:
