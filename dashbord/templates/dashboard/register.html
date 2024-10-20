@@ -36,7 +36,7 @@
           <div class="form-group">
             <p>{{ form.captcha.label_tag }}</p>
             <p>{{ form.captcha|add_class:"form-control" }} </p>
-            {% if form.password2.errors %}
+            {% if form.captcha.errors %}
                 <div class="text-danger">{{ form.captcha.errors }}</div>
             {% endif %}
         </div>
