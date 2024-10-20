@@ -33,13 +33,7 @@
                   <div class="text-danger">{{ form.password2.errors }}</div>
               {% endif %}
           </div>
-          <div class="form-group">
-            <p>{{ form.captcha.label_tag }}</p>
-            <p>{{ form.captcha|add_class:"form-control" }} </p>
-            {% if form.captcha.errors %}
-                <div class="text-danger">{{ form.captcha.errors }}</div>
-            {% endif %}
-        </div>
+
   
       </fieldset>
       

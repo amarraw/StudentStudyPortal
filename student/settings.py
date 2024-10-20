@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "dashbord",
     "accounts",
-    'captcha',
+
     # "crispy_forms",
 ]
 
@@ -143,6 +143,3 @@ EMAIL_HOST_USER = "manishaharijan94@gmail.com"
 EMAIL_HOST_PASSWORD = "okrf vems qiom cpsm"
 
 
-CAPTCHA_FONT_SIZE = 40
-CAPTCHA_LENGTH = 6
-CAPTCHA_IMAGE_SIZE = (150, 50)
