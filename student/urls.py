@@ -7,5 +7,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("dashbord.urls")),
     path("account/", include("accounts.urls")),
-    
+    path('captcha/', include('captcha.urls')), 
 ]
