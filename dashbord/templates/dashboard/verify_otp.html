@@ -1,0 +1,21 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h3>Verify Your OTP</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name="otp" placeholder="Enter OTP" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Verify</button>
+        {% if error %}
+        <p class="error-message">{{ error }}</p>
+        {% endif %}
+    </form>
+    <a class="btn btn-link" href="{% url 'register' %}">Go Back</a> 
+    <a class="btn btn-link" href="{% url 'home' %}">Home</a>
+    
+{% endblock  %}
+

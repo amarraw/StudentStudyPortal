@@ -1,0 +1,23 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+<div class="container text-center">
+    <h1>Unit Conversion</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <p>{{ form.input_value.label_tag }} {{ form.input_value }}</p>
+        <div>
+            {{ form.from_unit.label_tag }} {{ form.from_unit }}
+            {{ form.to_unit.label_tag }} {{ form.to_unit }}
+        </div>
+        <button type="submit" class="btn btn-danger mt-3">Convert</button>
+    </form>
+
+    <div class="mt-5">
+        {% if result is not None %}
+            <h2><strong>Converted Value: </strong>{{ result }}</h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
