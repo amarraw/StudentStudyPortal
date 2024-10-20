@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "dashbord",
     "accounts",
     'captcha',
+    'rest_framework'
     # "crispy_forms",
 ]
 
@@ -139,6 +140,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "manishaharijan94@gmail.com"
-EMAIL_HOST_PASSWORD = "okrf vems qiom cpsm"
+EMAIL_HOST_USER = "alin.raw01@gmail.com"
+EMAIL_HOST_PASSWORD = "wvdo hhkg oysw xsre"
 

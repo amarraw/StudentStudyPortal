@@ -302,6 +302,7 @@ def unit_conversion_view(request):
 @login_required(login_url='login')
 def user_profile(request):
     homewroks = Homework.objects.filter(is_finished=False,user=request.user)    
+
     todos = Todo.objects.filter(is_finished=False,user=request.user)
     if len(homewroks) == 0:
         homeworks_done = True
@@ -320,6 +321,9 @@ def user_profile(request):
         'todo_done':todo_done
     }
     return render(request, 'dashboard/profile.html', context)
+
+
+
 
 
 
